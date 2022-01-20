@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div style="background-color: #FFFAF4;">
+    <form id="addform" method=post style="border: solid; border-color: #FF9224;">
+        <div class="form-group">
+            <label for="formGroupExampleInput">任務名稱:</label>
+            <input type="text" id="missonName" class="form-control " placeholder="EX:幫忙買便當">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">內容:</label>
+            <textarea class="form-control" id="missonConten" rows="3" placeholder="EX:小木屋的咖哩拌飯*1"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">執行地點</label>
+            <input type="text" id="missonlocation" class="form-control" placeholder="EX:EE棟">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">時間:</label>
+            <input type="text" id="missontime" class="form-control" placeholder="EX:9/22">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">任務報酬:</label>
+            <input type="number" id="missonfee" class="form-control" placeholder="大於0">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">委託人:</label>
+            <input type="text" id="missonPerson" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">聯絡資訊:</label>
+            <textarea id="contactway" class="form-control" rows="3"></textarea>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary mb-2" id="submitButton">刊登任務</button>
+    </form>
+</div>
+
+<script src="../static/scripts/add.js"></script>
+
+
+{% endblock %}

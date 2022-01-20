@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #username {
+            font-size: 50px;
+        }
+
+        input[type=text]:enabled {
+            background: #F0F0F0;
+        }
+
+        input[type=text]:disabled {
+            background: #FFFFFF;
+        }
+
+        textarea:enabled {
+            background: #F0F0F0;
+        }
+
+        textarea:disabled {
+            background: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <button class="btn btn btn-primary text-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            個人資料
+        </button>
+        <div class="collapse" id="collapseExample">
+            <div class="border border-secondary">
+                <div class="card w-100">
+                    <div class="card-body" id="card">
+                        <input type="text" id="username" style="border-style: none;" disabled="disabled">
+
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label">電話號碼:</label>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <input type="text" id="inputphone" style="border-style: none;" disabled="disabled">
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label">其他資料:</label>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <textarea type="text" id="inputoherinfo" style="border-style: none; resize: none; " rows="3" disabled="disabled"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <a class="col order-first" id="edit">
+                                修改
+                            </a>
+                            <a class="col-auto" id="save" style="display:none">
+                                保存
+                            </a>
+                            <div class="col order-last">
+                                <h5 class="card-text text-end" id="rt"></h5>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center">
+                            <div class="col order-last">
+                                <h5 class="card-text text-end" id="at"></h5>
+                            </div>
+                        </div>
+
+
+                        <div class="row g-3 align-items-center">
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="row text-center" style="background-color:white">
+            <div class="col">
+                <div class="" id="waiting"><h1 class="fw-bold text-primary" id="waittext" type="submit">等待中</h1></div>
+            </div>
+            <div class="col">
+                <div class=" " id="doing"><h1 class="text-black-50" id="doingtext" type="submit">執行中</h1></div>
+            </div>
+            <div class="col">
+                <div class=" " id="done"><h1 class="text-black-50" id="donetext" type="submit">已完成</h1></div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="border border-secondary border-bottom-0 " id="show">
+
+            </div>
+            <div id="nm" style="color: #000000" class="text-center fs-1">
+
+            </div>
+        </div>
+
+        <script src="../static/scripts/myorder.js"></script>
+</body>
+</html>
+    {% endblock %}

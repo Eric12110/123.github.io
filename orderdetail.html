@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+  
+
+<div style="background-color: #FFFAF4;" class="mx-1">
+    <form id="acceptform" method=post style="border: solid; border-color: #FF9224;">
+        <div class="form-group">
+            <label for="formGroupExampleInput">任務名稱:</label>
+            <input type="text" id="missonName" class="form-control" readonly style=" background: white; color: black;">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">內容:</label>
+            <textarea class="form-control" id="missonConten" rows="3" readonly style=" background: white; color: black;"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">執行地點</label>
+            <input type="text" id="missonlocation" class="form-control" readonly style=" background: white; color: black;">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">時間:</label>
+            <input type="text" id="missontime" class="form-control" readonly style=" background: white; color: black;">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">任務報酬:</label>
+            <input type="number" id="missonfee" class="form-control" readonly style=" background: white; color: black;">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">委託人:</label>
+            <input type="text" id="missonPerson" class="form-control" readonly style=" background: white; color: black;">
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="formGroupExampleInput2">聯絡方式</label>
+            <textarea class="form-control" id="contactway" rows="3" readonly style=" background: white; color: black;"></textarea>
+        </div>
+        <br />
+        
+        
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-primary mb-2" id="abtn">接受委託</button>
+            </div>
+     
+            <div class="col">
+                
+                <button id="report" type="button" class="btn btn-outline-danger float-end" style="display:none;">檢舉</button>
+            </div>
+        </div>
+    </form>
+
+  
+</div>
+
+
+
+    <script src="../static/scripts/firebaseAPI.js"></script>
+    <script src="../static/scripts/ordertail.js"></script>
+
+{% endblock %}
+
