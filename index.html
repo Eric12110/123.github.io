@@ -1,1 +1,31 @@
 welcome to my website
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+
+        <table class="table  table-hover fs-2" >
+            <thead >
+                <tr class="table-light" >
+                    <th >任務名稱</th>
+                    <th >費用</th>
+                    <th >發布者</th>
+                    <th >發布日期</th>
+                </tr>
+            </thead>
+            <tbody  id="lobby-list" class=" table-light fs-2">
+            </tbody>
+        </table>
+    <div id="nm" style="display:none; color:black" class="text-center">
+        <h1>這裡還沒有任務快來發布吧!</h1>
+    </div>
+    <div>
+        <button id="add" class="btn btn-primary" onclick="location.href='/addpage'">
+            發布任務☚
+        </button>
+    </div>
+   
+    <script type="text/javascript" src="../static/scripts/lobby.js" charset="gb2312"></script>
+
+{% endblock %}
